@@ -8,13 +8,19 @@ def initializeWindow():
 
     return gui
 
-def setupWidgets():
-    pass
+def TestButton():
+    terror.executeModule("TerrorTest")
+
+def setupWidgets(gui):
+    testButton = ttk.Button(master = gui, text = "Test Me!", command = TestButton)
+    testButton.pack()
 
 def main():
+    terror.scanModules()
+
     gui = initializeWindow()
 
-    setupWidgets()
+    setupWidgets(gui)
 
     gui.mainloop()
 
