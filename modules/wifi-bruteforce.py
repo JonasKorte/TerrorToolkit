@@ -89,10 +89,3 @@ def execute(args):
             print("[!] Couldn't find password of network '" + args['ssid'] + "'. Maybe try a different wordlist?")
     
     return result
-
-
-
-            
-
-
-
