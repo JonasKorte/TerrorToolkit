@@ -5,8 +5,15 @@ import os
 
 NAME = 'Wi-Fi Bruteforce'
 
+ARGS = {
+    'interface': 'str',
+    'ssid': 'str',
+    'wordlist_path': 'str'
+}
+
 def show_help():
     pass
+
 def execute(args):
     try:
         if args['show_help'] == 1:
@@ -20,7 +27,7 @@ def execute(args):
     print("\n[*] Selected interface: '" + str(args['interface']) + "'.")
 
     iface_index = args['interface']
-    iface = wifi.interfaces()[iface_index]
+    iface = wifi.interfaces()[int(iface_index)]
 
     print('[*] Disconnecting from network...')
 

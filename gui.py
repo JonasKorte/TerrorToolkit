@@ -9,7 +9,7 @@ def initializeWindow():
     return gui
 
 def TestButton():
-    terror.executeModule("TerrorTest")
+    terror.executeModule("terrortest")
 
 def setupWidgets(gui):
     testButton = ttk.Button(master = gui, text = "Test Me!", command = TestButton)

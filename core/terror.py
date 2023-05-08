@@ -21,3 +21,6 @@ def scanModules():
     
     print('\n[*] Scanned ' + str(len(modules)) + ' module(s).\n')
     il.invalidate_caches()
+
+def getModuleArgList(mod_name):
+    return modules[mod_name].ARGS
